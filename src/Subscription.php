@@ -859,6 +859,7 @@ class Subscription extends Model
      * Stop the subscription from being canceled at the end of the current billing period.
      *
      * @deprecated Use stopCancellation instead.
+     * 
      * @return $this
      */
     public function stopCancelation()
