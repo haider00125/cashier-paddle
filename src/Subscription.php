@@ -858,9 +858,20 @@ class Subscription extends Model
     /**
      * Stop the subscription from being canceled at the end of the current billing period.
      *
+     * @deprecated function contain typo in name and will be removed in a future version. Use stopCancellation instead.
      * @return $this
      */
     public function stopCancelation()
+    {
+        return $this->stopCancellation();
+    }
+
+    /**
+     * Stop the subscription from being canceled at the end of the current billing period.
+     *
+     * @return $this
+     */
+    public function stopCancellation()
     {
         $response = $this->updatePaddleSubscription(['scheduled_change' => null]);
 
